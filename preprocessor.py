@@ -76,6 +76,8 @@ class TiledPreProcessor:
                     self.layers[lyr_name][obj_i]['x'] = data['layers'][i]['objects'][obj_i]['x']
                     self.layers[lyr_name][obj_i]['y'] = data['layers'][i]['objects'][obj_i]['y']
 
+                # You can add any further information you feel is necessary to collect by referencing the corresponding key.
+
 
     def store_data(self, name: str, destiny: str = os.path.dirname(os.path.abspath(__file__))) -> None:
         """
@@ -118,3 +120,4 @@ class TiledPreProcessor:
         
         with open(path, 'w', encoding='utf-8') as file: json.dump(self.layers, file, indent=2) # you can change the indentation
         print('End of processing.')
+
